@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Neural Networks Proposal</title>
+</head>
+<body>
+    <div class="title-bar"> 
+        <h1>Artificial Artist</h1>
+        <h2>A Project Proposal for Pomona CS152</h2>
+    </div>
+
+    <div class="content-box">
+        <h1>Artificial Artist</h1>
+        <br>
+
+        <img src=Cubism_example.jpg>
+
+        <h3>Project Description</h3>
+        <p>
+            I will create a generative adversarial network to train two models.
+            The first model will work to create works of art based on a given input and category.
+            The second will be used to train the first, categorizing the artifically created artwork,
+            and helping to adjust the first until it can create artwork that is highly likely to fall
+            within a specific art discipline.
+            <br>
+            This project will require either finding or creating a dataset of paintings that fall
+            within a particular artistic category. Then the creation of a classifier. This classifier
+            will aid in determining the classification of the artwork.
+            <br>
+            The hope is to deploy the project such that allows the user to input a category and get an 
+            original work of art relevent to that category back.
+        </p>
+
+        <h3>Project Goals</h3>
+        <ul>
+            <li>Create or find a categorically labeled artwork database.</li>
+            <li>Train a classifier for these categories.</li>
+            <li>Train a discriminator model that distinguish between categories and between real or fake art.</li>
+            <li>Train a generator model that can create original images.</li>
+        </ul>
+    </div>    
+</body>
+</html>
