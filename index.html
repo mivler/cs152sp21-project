@@ -89,7 +89,7 @@
     </div>
 
 
-    <div class="content-box lit-review">
+    <div class="content-box lit-review hidden">
         <h1>pAIcasso</h1>
         <br>
         <h3> 
@@ -149,6 +149,35 @@
             the philosophical questions we asked about who the artist is in this scenario. 
         </p>
         <br><br>
+    </div>
+
+    <div class="content-box update">
+        <h1>pAIcasso</h1>
+        <br>
+        <h3> 
+            Project Update
+        </h3>
+        <br>
+        <br>
+        <h4>
+            Software and Dataset
+        </h4>
+        <p>We will be using PyTorch, Jupyter Notebooks, and potentially CycleGAN to complete this project</p>
+        <p>We will create the dataset with Python and APIs to scrape the web for images related to particular art choices</p>
+        
+        <br>
+        
+        <h4>
+            The NN Design
+        </h4>
+        <p> We will be using a GAN consisting of a generator model and a discrimiator model. We will shrink our dataset to 256x256
+            pixel images which we will pass in to the generator as 3-channel images with an additional "Desired category" input.
+            The generator will be a Convolutional Neural Network and will similarly output a 3-channel image of the same dimensions. 
+            This generator output, along with some of the art/training inputs will be passed into the discriminator, another Convolutional
+            Neural Network. This discriminator model will output a vector of dimensions (n+1, 1) where n is the number of categories of art,
+            and the +1 stands in for a "fake" category that does not fit in with the other artistic classifications. 
+        </p>
+
     </div>
 
 </body>
