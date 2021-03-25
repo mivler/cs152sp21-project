@@ -180,7 +180,7 @@
 
     </div>
 
-    <div class="content-box Intro-related-works">
+    <div class="content-box Intro-related-works hidden">
         <h1>pAIcasso</h1>
         <br>
         <h3> 
@@ -205,6 +205,25 @@
         <p> In 2015, Leon Gatys, Alexander Ecker and Matthias Bethge separated style from content in pictures, leading to what is known as Neural Style Transfer. In their paper, they discuss their method for taking two images, and generating a new picture that contains the content of the first in the style of the second. Their loss function was defined to find weights to minimize the loss of style and content separately. The result was many pictures that were clearly in the style of specific paintings, such as The Starry Night by Vincent van Gogh, Der Schrei by Edvard Munch, and Femme nue assise by Pablo Picasso. See [2] for examples.</p>
         <p>The work done by [2] was groundbreaking at the time, but it still had its drawbacks. Neural Style Transfer was designed to work between two distinct images, and it could not map entire sets to each other. Pix2Pix [6] became a well-known image-to-image translation tool, but it required large amounts of labeled data, something that is hard to come by for many of the problems outlined above. This is where CycleGAN comes in. CycleGAN [3] was developed by Zhu et al. in an attempt to tackle image-to-image translation without labeled data. They did this by using two GANs, which allowed them to generate realistic images that were also directly mapped to the original image. That is, for an input image in set X they found a function F: X -> Y that translated the input into an image in the set Y. Then, to ensure that the generated image was “from” the input image, they found another function G: Y -> X and transformed it back. The loss function was centered around the difference between the input image and the generated image from function G. This allowed for a neural network to make connections between sets of things without labeled data on which the neural networks could have been trained. [3] provides a number of examples for how CycleGAN can be used, including style transfer in artwork, horses to zebras, and summer to winter landscapes.</p>
         <p>Separate from the work we will be doing, it should be mentioned that CycleGAN is not just used for image translation. It is also used by artists to generate new and unique works that are satisfyingly intriguing and not what you might expect. Helena Sarin [4] is one such artist, who uses GANs as her medium. In our exploration of image artwork style translation, we hope to also encounter images that sometimes might not be what we wanted or expected, but are strange, new, and interesting nonetheless.</p>
+    </div>
+
+    <div class="content-box update-2">
+        <h1>pAIcasso</h1>
+        <br>
+        <h3> 
+            Update 2
+        </h3>
+        <br>
+        <br>
+        <p>
+            We have collected 300 photos for each category in our dataset and are parsing through them to unsure they fit our standards.
+            That means, no duplicates, images themselves, not pictures of images or exhibits, and actual art, not junk from the search results.
+            <br>
+            So far our main issue is cleaning the dataset, and figuring out how to do a CNN.
+            <br>
+            We are aiming for an A.
+        </p>
+
     </div>
 
 </body>
