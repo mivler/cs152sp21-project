@@ -223,17 +223,17 @@
         </p>
     </div>
 
-    <div class="content-box Methods-Outline">
+    <div class="content-box Discussion-Outline">
         <h1>pAIcasso</h1>
         <br>
         <h3> 
-            Methods Outline
+            Discussion
         </h3>
         <h4>
             Introduction
         </h4>
         <p>Our work training this generative art model yields more than original works of art. By displaying an understanding of various styles through its capacity for stylistic mimicry and contextualization of content through caption creation, it gives insights into the potentially arbitrary nature by which society classifies artistic works. Through the generation of artificial two-dimensional works of art and associated captions, we are able to develop a sense of what characteristics of the artwork are intrinsic to that particular style. In addition, the artificial artist produces original works based on a predetermined style and the input image’s content features. </p>
-        <p>We plan to use multiple neural networks and CycleGAN to generate new images that can be classified as one of the following artistic categories: Impressionism, Cubism, Contemporary, Modern, Abstract, Surrealism, Xieyi, Gongbi, Min-hwa, Mughal, and Kente. Additionally, we will use similar methods to generate captions for each of the generated images. Using CycleGAN allows us to do this without labeled training data and to train on sets of styles, rather than individual artistic works. </p>
+        <p>We plan to use multiple neural networks to generate new images that can be classified as one of the following artistic categories: Impressionism, Cubism, Contemporary, Modern, Abstract, Surrealism, Xieyi, Gongbi, Min-hwa, Mughal, and Kente. Additionally, we will use similar methods to generate captions for each of the generated images. </p>
         <p>Our initial challenge is creating a dataset of images that appropriately aligned with each category with which we could properly train our necessary GAN models – a discriminator model for classification/artificial art detection and a generator model for creation of properly classified art with a relevant name/caption. The dataset is created through scraping the web for images in each of the artistic categories, then checking them by hand to ensure they are appropriate inputs (no repeats, ensure images of art, not photos of exhibits, etc…). Finally, we alter the dimensions of each input to be 256x256 pixels, which speeds up training and keeps everything consistent for our neural network’s sizing values. We utilize three convolutional neural networks for creation, classification, and input-feature decomposition, respectively. Training and tweaking hyperparameters of the classification, input-feature decomposition, and creation models, we check the visual acuity and stylistic applications of the creation model.</p>
         <p>In the end, our model creates original works of art that, when judged by humans, were classified as the appropriate style, and as expected, the captions associated with the works indicate an understanding of the content depicted in the work. This shows there are, in fact, relevant consistencies throughout the works in a given style.</p>            
         <br>
@@ -257,6 +257,18 @@
             Each category had just under 300 images before cleaning; this number ranges from 200-275 after cleaning, and will be closer to 200 for the actual training of each category. 
             For an analysis of the CycleGAN we create, we will use matplotlib to graph and analyze the accuracy and values obtained from our Minimax Loss function. 
             This will give us insight into parameters that can be manually changed to improve performance, and the general effectiveness of our neural network’s purposes.
+        </p>
+
+        <h4>
+            Discussion Outline
+        </h4>
+        <p>
+            Evaluating the performance of our model is relatively straightforward. We simply want to see how many fake/generated images classify as real/authentic works of art. Though this method sounds good in practice, it could ultimately be skewed by the generator model developing at a faster pace than the discriminator model. Since the goal is to make a model that can produce art in a given style, the similarity of the art pieces can also be determined by eye. That said, we continued to monitor the accuracy of images that are classified as real or fake to ensure that on epochs where the discriminator is backpropagated, it gets better over time, and on epochs where the generator is backpropagated the classifier gets worse. 
+            By evaluating these patterns on a per epoch basis we can also distinguish which/if one model is progressing significantly faster than the other, allowing us to determine if the learning rate of a given model could be reduced. Similarly, by comparing images generated to those from our dataset, we could visually evaluate the similarity to the dataset and consistency between generated images.
+            Relative to other similar work in the discipline, our images are produced without an emphasis on adding style to a context image with neural style transfer, rather the creation of a generic image that falls within a stylistic discipline. 
+            Comparing the different outputs and the differences in style of the GAN images, we notice that works of art have similar and distinct characteristics.
+            It is important to understand the implications of this tool. Firstly there is the question of whether our AI is merely a tool for us to create, or if we would be wrongly taking credit for its work.
+            Finally, there are ethical implications to the art created by a machine that attributes no meaning to it. One of the styles we looked into was Kente, which is often produced on textiles and often attributes meaning to different colors and patterns. Understanding this, even if replicated well, it seems unethical to truly consider the work as Kente if its creator does not understand nor acknowledge the meanings of the components that create this style.
         </p>
     </div>
 
